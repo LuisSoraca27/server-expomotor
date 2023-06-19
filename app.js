@@ -15,6 +15,10 @@ app.use(helmet());
 app.use(compression());
 
 
+app.get("/", (req, res) => {
+    res.send("Hello World!");
+})
+
 
 app.post('/api/v1/forms', async (req, res) => {
     const { name, phone, clientType, document, comment } = req.body;
