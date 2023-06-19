@@ -53,7 +53,6 @@ app.post('/api/v1/forms', async (req, res) => {
 })
 
 
-
 app.all("*", (req, res) => {
     res.status(404).json({
       status: "error",
@@ -62,4 +61,9 @@ app.all("*", (req, res) => {
   });
 
 
-export default app;
+const PORT = process.env.PORT || 5000
+
+  app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
+})
+
