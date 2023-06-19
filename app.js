@@ -9,7 +9,7 @@ const app = express();
 
 // Enable Express app to receive JSON data
 app.use(express.json());
-app.use(morgan('dev'));
+app.use(morgan('combined'));
 app.use(cors());
 app.use(helmet());
 app.use(compression());
